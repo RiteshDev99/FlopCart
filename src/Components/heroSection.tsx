@@ -10,13 +10,17 @@ import fashionData from "../mockData/fashion";
 import electronicsData from "../mockData/electronicsData";
 import brandData from "../mockData/brands";
 import favoriteData from "../mockData/favorite";
-import Footer from "./footer";
 import scrollData from "../mockData/scrollData";
+
+
+
+
+
 
 const HeroSection = () => {
     return (
         <>
-            <div className="h-[410vh] w-[100vw] bg-blue-400 ">
+            <div className="h-[365vh] w-[100vw] bg-blue-400 ">
                 <div className="flex justify-center">
                     <div className="h-[13vh] w-[95vw] bg-blue-200 flex justify-center items-center rounded-sm">
                         <div className="flex gap-[4vw] overflow-hidden cursor-pointer ">
@@ -32,7 +36,7 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-
+                
                 <div className="flex justify-center pt-[2vh]">
                     <div className="h-[28vh] w-[95vw] bg-blue-200 flex  overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide ">
                         {
@@ -41,7 +45,7 @@ const HeroSection = () => {
                                     className=""
                                     src={scroll.img} alt="" />
                             ))
-                            
+
                         }
                     </div>
 
@@ -121,9 +125,7 @@ const HeroSection = () => {
 
                         }
                     </div>
-
                 </Container>
-                <Footer />
             </div>
 
         </>

@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <>
-            <div className="h-[45.1vh] w-[100vw] bg-black mt-[12vh] items-center">
+            <div className="h-[50vh] w-[100vw] bg-black  items-center">
                 <div className="">
 
 

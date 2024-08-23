@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.App {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.section {
+    height: 100vh;
+    scroll-snap-align: start;
+}

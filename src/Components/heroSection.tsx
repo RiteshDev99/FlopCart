@@ -11,6 +11,8 @@ import electronicsData from "../mockData/electronicsData";
 import brandData from "../mockData/brands";
 import favoriteData from "../mockData/favorite";
 import scrollData from "../mockData/scrollData";
+import {NavLink} from "react-router-dom"
+
 
 
 
@@ -53,14 +55,19 @@ const HeroSection = () => {
 
 
                 <Container text="Best Deals on Smartphone">
-                    <div className="flex gap-[1vw] justify-evenly  cursor-pointer  ">
+                    <div className=" Phone-Sections flex gap-[1vw] justify-evenly  cursor-pointer  ">
 
-                        {
-                            productData.map((product) => (
-                                <Block text={product.title} price={product.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden" src={product.img} alt={product.title} /></Block>
-                            ))
-
-                        }
+                        {productData.map((product) => (
+                            <NavLink to={`/products/${product.id}`} key={product.id}>
+                                <Block text={product.title} price={product.price}>
+                                    <img
+                                        className="transition-all duration-300 hover:scale-95 w-full h-auto z-0 overflow-hidden"
+                                        src={product.img}
+                                        alt={product.title}
+                                    />
+                                </Block>
+                            </NavLink>
+                        ))}
                     </div>
                 </Container>
 
@@ -75,8 +82,8 @@ const HeroSection = () => {
                 <Container text="Bestsellers on Fashion">
                     <div className="flex justify-evenly cursor-pointer">
                         {
-                            fashionData.map((faishan) => (
-                                <Block text={faishan.text} price={faishan.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden" src={faishan.img} alt={faishan.text} /></Block>
+                            fashionData.map((fashion) => (
+                                <Block text={fashion.text} price={fashion.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden" src={fashion.img} alt={fashion.text} /></Block>
 
                             ))
                         }

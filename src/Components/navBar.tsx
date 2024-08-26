@@ -1,6 +1,8 @@
 
 import { CiSearch } from "react-icons/ci";
 import { NavLink } from 'react-router-dom'
+import { AiOutlineShoppingCart } from "react-icons/ai";
+
 
 
 
@@ -22,12 +24,15 @@ const NavBar = () => {
                         <NavLink to="Account">Account</NavLink>
                     </li>
                     <li className="hover:text-blue-700 hover:underline">
-                        <NavLink to="/Cart">Cart</NavLink>
+                        <NavLink className="flex items-center gap-2" to="/Cart"> <AiOutlineShoppingCart className="text-xl"/>
+                            Cart</NavLink>
                     </li>
                     <li className="hover:text-blue-700 hover:underline">
                         <NavLink to="/About"> About</NavLink>
                     </li>
-                    <li className="hover:text-blue-700 hover:underline">Became a Seller</li>
+                    <li className="hover:text-blue-700 hover:underline">
+                        <NavLink to="/Became a Seller">Became a Seller</NavLink>
+                    </li>
                 </ul>
 
             </div>

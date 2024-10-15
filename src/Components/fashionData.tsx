@@ -1,8 +1,9 @@
 
-import PhoneDetails from "./phoneDetails";
+import FashionDetails from "./fashionDetails";
 
 
-const Details = () => {
+
+const Fashion = () => {
 
     return (
         <>
@@ -10,7 +11,7 @@ const Details = () => {
 
                 <div className="h-[100%] w-[80%] bg-blue-200 rounded-sm">
 
-                    <PhoneDetails />
+<FashionDetails/>
 
 
                 </div>
@@ -22,5 +23,5 @@ const Details = () => {
     )
 }
 
-export default Details;
+export default Fashion;
 

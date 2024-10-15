@@ -11,7 +11,7 @@ import electronicsData from "../mockData/electronicsData";
 import brandData from "../mockData/brands";
 import favoriteData from "../mockData/favorite";
 import scrollData from "../mockData/scrollData";
-import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 
 
@@ -38,7 +38,7 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-                
+
                 <div className="flex justify-center pt-[2vh]">
                     <div className="h-[28vh] w-[95vw] bg-blue-200 flex  overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide ">
                         {
@@ -83,7 +83,12 @@ const HeroSection = () => {
                     <div className="flex justify-evenly cursor-pointer">
                         {
                             fashionData.map((fashion) => (
-                                <Block text={fashion.text} price={fashion.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden" src={fashion.img} alt={fashion.text} /></Block>
+                                <NavLink to={`/fashion/${fashion.id}`} key={fashion.id}>
+                                    <Block text={fashion.text} price={fashion.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden"
+                                        src={fashion.img}
+                                        alt={fashion.text} /></Block>
+
+                                </NavLink>
 
                             ))
                         }
@@ -101,7 +106,12 @@ const HeroSection = () => {
                     <div className="flex justify-evenly cursor-pointer">
                         {
                             electronicsData.map((electronics) => (
-                                <Block text={electronics.text} price={electronics.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden" src={electronics.img} alt="" /></Block>
+                                <NavLink to={`/electrnics/${electronics.id}`} key={electronics.id}>
+                                    <Block text={electronics.text} price={electronics.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden"
+                                        src={electronics.img}
+                                        alt="" /></Block>
+
+                                </NavLink>
                             ))
 
                         }
@@ -111,7 +121,12 @@ const HeroSection = () => {
                     <div className="flex justify-evenly cursor-pointer">
                         {
                             brandData.map((brand) => (
-                                <Block text={brand.text} price={brand.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden" src={brand.img} alt="" /></Block>
+                                <NavLink to={`/brand/${brand.id}`} key={brand.id}>
+                                    <Block text={brand.text} price={brand.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden"
+                                        src={brand.img}
+                                        alt="" /></Block>
+
+                                </NavLink>
                             ))
                         }
                     </div>
@@ -127,7 +142,13 @@ const HeroSection = () => {
                     <div className="flex justify-evenly cursor-pointer ">
                         {
                             favoriteData.map((favorite) => (
-                                <Block text={favorite.text} price={favorite.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden" src={favorite.img} alt="" /></Block>
+                                <NavLink to={`/favorite/${favorite.id}`} key={favorite.id}>
+
+                                    <Block text={favorite.text} price={favorite.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden"
+                                        src={favorite.img}
+                                        alt="" /></Block>
+                                </NavLink>
+                              
                             ))
 
                         }

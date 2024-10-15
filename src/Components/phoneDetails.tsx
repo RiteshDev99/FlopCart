@@ -1,9 +1,14 @@
 import { FaShoppingCart, FaBolt } from "react-icons/fa";
-import PhoneImage, {} from "./phoneImage";
+import PhoneImage, { } from "./phoneImage";
 import { useParams } from "react-router-dom";
 import productData, { product } from "../mockData/productData";
 import { useEffect, useState } from "react";
 import PhoneBlocks from "./phoneBlocks";
+import { NavLink } from "react-router-dom";
+
+
+
+
 
 const PhoneDetails = () => {
     const { id } = useParams();
@@ -14,13 +19,15 @@ const PhoneDetails = () => {
         const product = productData.find((item) => item.id === id);
         if (product) {
             setData(product);
-            setCurrentImage(product.img); 
+            setCurrentImage(product.img);
         }
     }, [id]);
 
     const handleMouseEnter = (image: string | undefined) => {
         setCurrentImage(image);
     };
+
+
 
     return (
         <>
@@ -56,7 +63,16 @@ const PhoneDetails = () => {
                         <PhoneImage img={currentImage} />
                     </div>
                     <div className="Button flex gap-2 mt-3 ml-9">
-                        <button className="bg-[#fbbf24] h-[6vh] w-[10vw] rounded-sm flex items-center justify-center gap-2 text-white font-bold"><FaShoppingCart />ADD TO CART</button>
+                        <NavLink to={`/add-to-cart/${data?.id}`} key={data?.id} className="bg-[#fbbf24] h-[6vh] w-[10vw] rounded-sm flex items-center justify-center gap-2 text-white font-bold"
+
+                        >
+
+                            <FaShoppingCart />
+                            ADD TO CART
+
+                        </NavLink>
+
+
                         <button className="bg-[#fb641b] h-[6vh] w-[10vw] rounded-sm text-white font-bold flex items-center justify-center gap-2 "> <FaBolt />BUY NOW</button>
                     </div>
                 </div>

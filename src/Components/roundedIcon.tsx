@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes } from "react";
+import  { ButtonHTMLAttributes } from "react";
 
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";

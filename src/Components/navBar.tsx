@@ -1,5 +1,5 @@
 import { CiSearch } from "react-icons/ci";
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, User } from "firebase/auth";
 import { app } from "../firebase";
@@ -68,20 +68,27 @@ const NavBar = () => {
 
                     {/* Account */}
                     <li className="hover:text-blue-700 hover:underline">
-                        <NavLink to="/Account">Account</NavLink>
+                        {/* <NavLink to="/Account">Account</NavLink> */}
+                        <h1>Account</h1>
                     </li>
 
                     {/* Cart */}
                     <li className="hover:text-blue-700 hover:underline">
-                        <NavLink className="flex items-center gap-2" to="/Cart">
+                        {/* <NavLink className="flex items-center gap-2" to="/Cart">
                             <AiOutlineShoppingCart className="text-xl" /> Cart
-                        </NavLink>
+                        </NavLink> */}
+
+                        <h1 className="flex items-center gap-2">
+                            <AiOutlineShoppingCart className="text-xl" /> Cart
+                        </h1>
                     </li>
 
                     {/* Profile - Show profile image if user is logged in */}
                     <li className="hover:text-blue-700 hover:underline flex items-center">
-                        <NavLink to="/About">
-                            {user?.photoURL ? (
+                        {/* removed navlink */}
+
+                        <div>  
+                             {user?.photoURL ? (
                                 <img
                                     src={user.photoURL}
                                     alt="User Profile"
@@ -90,12 +97,13 @@ const NavBar = () => {
                             ) : (
                                 <CgProfile className="text-xl" />
                             )}
-                        </NavLink>
+                        </div>
                     </li>
 
                     {/* Become a Seller */}
                     <li className="hover:text-blue-700 hover:underline">
-                        <NavLink to="/BecomeASeller">Become a Seller</NavLink>
+                        {/* <NavLink to="/BecomeASeller">Become a Seller</NavLink> */}
+
                     </li>
                 </ul>
             </div>

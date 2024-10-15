@@ -11,7 +11,7 @@ import electronicsData from "../mockData/electronicsData";
 import brandData from "../mockData/brands";
 import favoriteData from "../mockData/favorite";
 import scrollData from "../mockData/scrollData";
-import { NavLink } from "react-router-dom"
+// import { NavLink } from "react-router-dom"
 
 
 
@@ -57,8 +57,10 @@ const HeroSection = () => {
                 <Container text="Best Deals on Smartphone">
                     <div className=" Phone-Sections flex gap-[1vw] justify-evenly  cursor-pointer  ">
 
+                    
+
                         {productData.map((product) => (
-                            <NavLink to={`/products/${product.id}`} key={product.id}>
+                            // <NavLink to={`/products/${product.id}`} key={product.id}>
                                 <Block text={product.title} price={product.price}>
                                     <img
                                         className="transition-all duration-300 hover:scale-95 w-full h-auto z-0 overflow-hidden"
@@ -66,7 +68,7 @@ const HeroSection = () => {
                                         alt={product.title}
                                     />
                                 </Block>
-                            </NavLink>
+                            // </NavLink>
                         ))}
                     </div>
                 </Container>
@@ -83,12 +85,12 @@ const HeroSection = () => {
                     <div className="flex justify-evenly cursor-pointer">
                         {
                             fashionData.map((fashion) => (
-                                <NavLink to={`/fashion/${fashion.id}`} key={fashion.id}>
+                                // <NavLink to={`/fashion/${fashion.id}`} key={fashion.id}>
                                     <Block text={fashion.text} price={fashion.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden"
                                         src={fashion.img}
                                         alt={fashion.text} /></Block>
 
-                                </NavLink>
+                                // </NavLink>
 
                             ))
                         }
@@ -106,12 +108,12 @@ const HeroSection = () => {
                     <div className="flex justify-evenly cursor-pointer">
                         {
                             electronicsData.map((electronics) => (
-                                <NavLink to={`/electrnics/${electronics.id}`} key={electronics.id}>
+                                // <NavLink to={`/electrnics/${electronics.id}`} key={electronics.id}>
                                     <Block text={electronics.text} price={electronics.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden"
                                         src={electronics.img}
                                         alt="" /></Block>
 
-                                </NavLink>
+                                // </NavLink>
                             ))
 
                         }
@@ -121,12 +123,12 @@ const HeroSection = () => {
                     <div className="flex justify-evenly cursor-pointer">
                         {
                             brandData.map((brand) => (
-                                <NavLink to={`/brand/${brand.id}`} key={brand.id}>
+                                // <NavLink to={`/brand/${brand.id}`} key={brand.id}>
                                     <Block text={brand.text} price={brand.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden"
                                         src={brand.img}
                                         alt="" /></Block>
 
-                                </NavLink>
+                                // </NavLink>
                             ))
                         }
                     </div>
@@ -142,12 +144,12 @@ const HeroSection = () => {
                     <div className="flex justify-evenly cursor-pointer ">
                         {
                             favoriteData.map((favorite) => (
-                                <NavLink to={`/favorite/${favorite.id}`} key={favorite.id}>
+                                // <NavLink to={`/favorite/${favorite.id}`} key={favorite.id}>
 
                                     <Block text={favorite.text} price={favorite.price}><img className="transition-all duration-300 hover:scale-95 w-full h-auto  z-0 overflow-hidden"
                                         src={favorite.img}
                                         alt="" /></Block>
-                                </NavLink>
+                                // </NavLink>
                               
                             ))
 
